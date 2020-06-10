@@ -379,7 +379,7 @@ form div.form-action-buttons{
 @media (max-width: 1000px) {
   .addbtn{
     position: relative;
-    right: 40px;
+    right: 25px;
     top: 10px;
   }
 }
