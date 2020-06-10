@@ -376,3 +376,10 @@ tr:nth-child(even),table.list thead>tr{
 form div.form-action-buttons{
   text-align: right;
 }
+@media (max-width: 1000px) {
+  .addbtn{
+    position: relative;
+    right: 40px;
+    top: 10px;
+  }
+}
