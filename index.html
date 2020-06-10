@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Student's Record</title>
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="text-primary text-uppercase text-center adjust font">St.  Thomas  international  school</h1>
+    <!-- <div class="pad"> -->
+
+    <br>
+    <h3>To add student detail.</h3>
+    <div class="d-flex pad justify-content-end">
+      <button type="button" class="btn btn-color btn-lg addbtn " data-toggle="modal" data-target="#exampleModal" onclick="onFormSubmit()">Add Record</button>
+    </div>
+    <!-- <h1 class="text-danger pad">All records</h1> -->
+
+  <!-- </div> -->
+    <!-- Modal -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Fill out the details :</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form onsubmit="event.preventDefault();" autocomplete="off">
+
+              <div class="form-group">
+                <label>Roll Number :</label>
+                <input type="text" name="rollnumber" id="rollnumber" placeholder="eg : 123456" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Full Name* : </label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                <input type="text" name="firstname" value="" id="firstname" placeholder="Your Full Name" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Gender :</label><br>
+                <input type="radio" class="Male" id="gender" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" class="Female" id="gender" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <input type="radio" class="Other" id="gender" name="gender" value="Other">
+                <label for="other">Other</label>
+             </div>
+
+              <div class="form-group">
+                <label>Standard :</label>
+                <input type="text" name="standard" value="" id="standard" placeholder="Standard" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>DOB :</label>
+                <input type="date" name="birthdate" value="" id="birthdate" placeholder="Birthdate" class="form-control">
+              </div>
+
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="onFormSubmit()">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!--  Table -->
+
+    <table class="list" id="studentList">
+      <thead>
+        <tr>
+          <th>Roll Number</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Standard</th>
+          <th>DOB</th>
+          <th>Edit Action</th>
+          <th>Delete Action</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
